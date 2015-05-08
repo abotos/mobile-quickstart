@@ -33,7 +33,7 @@ def token():
     capability.allow_client_incoming(client)
 
   # This returns a token to use with Twilio based on the account and capabilities defined above
-  return capability.generate()
+  return capability.generate(expires = 82800)
 
 @app.route('/call', methods=['GET', 'POST'])
 def call():
